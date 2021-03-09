@@ -12,7 +12,7 @@ import { DataService } from '../services/data.service';
 })
 export class DocumentViewComponent implements OnInit {
 
-  selectedScanDocument: ScanDocument;
+  selectedDocument: ScanDocument;
 
   constructor(private dataService: DataService,
               private location: Location,
@@ -31,7 +31,7 @@ export class DocumentViewComponent implements OnInit {
   // Get Document Data From Database
   viewScanDocument(id: number) {
     this.dataService.viewScanDocument(id).subscribe(data => {
-      this.selectedScanDocument = data['results'];
+      this.selectedDocument = data['results'];
     });
   }
 
