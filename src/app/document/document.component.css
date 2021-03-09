@@ -1,0 +1,42 @@
+.sidenav {
+    padding: 15px 30px 15px 30px;
+}
+
+.header {
+    margin-top: 10px;
+    margin-left: 10px;
+}
+
+.dropdown {
+    display: block;
+}
+
+.input-group {
+    padding-top: 15px;
+}
+
+.input-group button {
+    background-color: #21B371;
+    border: none;
+}
+
+.form-control {
+    margin-bottom: 10px;
+}
+
+.margin {
+    margin-top: 5px;
+    margin-bottom: 10px;
+}
+
+.status-btn-0 {
+    border: 1px solid #FCDB77;
+    color: #FCDB77;
+}
+
+.status-btn-1 {
+    border: 1px solid #96D8BA;
+    color: #96D8BA;
+}
+
+  

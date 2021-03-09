@@ -1,0 +1,53 @@
+.header {
+    margin-top: 50px;
+    margin-bottom: 30px;
+}
+
+.example-form {
+  min-width: 150px;
+  max-width: 500px;
+  width: 100%;
+  margin: auto;
+}
+
+.example-full-width {
+  width: 80%;
+}
+
+example-right-align {
+  text-align: right;
+}
+
+input.example-right-align::-webkit-outer-spin-button,
+input.example-right-align::-webkit-inner-spin-button {
+  display: none;
+}
+
+input.example-right-align {
+  -moz-appearance: textfield;
+}
+
+.example-section {
+  margin: 0px 0;
+}
+
+.example-margin {
+  margin: 0 12px;
+}
+
+.forget-password a:hover {
+  color: #000;
+  cursor: pointer;
+}
+
+.forget-password a {
+  color: #000;
+}
+
+.login-button {
+  background-color: #21B371;
+  color: #ffffff;
+  width: 120px;
+  margin-left: 170px;
+}
+

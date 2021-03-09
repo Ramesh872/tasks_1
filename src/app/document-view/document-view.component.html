@@ -1,0 +1,136 @@
+<!-- Side Menu -->
+<div class="row">
+    <div class="col-md-1" style="background-color: black; height: 520px;">
+        <div class="sidenav">
+            <a href="#">
+                <img src="assets/icons/dashboard (5) 1.svg">
+            </a>
+        </div>
+        <div class="sidenav">
+            <a href="#">
+                <img src="assets/icons/Group (4).svg">
+            </a>
+        </div>
+        <div class="sidenav">
+            <a href="#">
+                <img src="assets/icons/business-report-with-growth (1) 1.svg">
+            </a>
+        </div>
+        <div class="sidenav">
+            <a href="#">
+                <img src="assets/icons/settings (2) 1.svg">
+            </a>
+        </div>
+        <div class="sidenav">
+            <a href="#">
+                <img src="assets/icons/user 2.svg">
+            </a>
+        </div>
+        <div class="sidenav">
+            <a routerLink="/login">
+                <img src="assets/icons/logout-button 1.svg" alt="">
+            </a>
+        </div>
+    </div>
+
+    <div class="col-md-11">
+
+        <div class="row" *ngIf="selectedDocument !== null">
+
+            <!-- Name -->
+            <div class="col-md-4">
+                <div class="row">
+                    <button style="margin-right: 10px;" mat-flat-button (click)="back()">Back</button>
+                    <h4>{{ selectedDocument.fieldName }}</h4>
+                </div>
+        
+            </div>
+        
+            <!-- Document Id-->
+            <div class="col-md-4">
+                <label>Document Id : &nbsp; {{ selectedDocument.Tenant_ID }}</label>
+            </div>
+        
+            <div class="col-md-4"></div>
+        
+        </div>
+        
+        <div class="row">
+        
+            <!-- Id Details and Address -->
+            <div class="col-md-3">
+        
+            </div>
+        
+            <!-- Id Card -->
+            <div class="col-md-6">
+        
+            </div>
+        
+            <!-- Scan Details -->
+            <div class="col-md-3">
+        
+                <!-- Scan Id -->
+                <div class="row">
+                    <label style="color: #BDC3C6; padding-right: 10px;">Scan ID</label>
+                    <label>-</label>
+                </div>
+        
+                <!-- Start Date-->
+                <div class="row">
+                    <label style="color: #BDC3C6; padding-right: 10px;">Start Date</label>
+                    <label>{{ selectedDocument.startDate | date: 'dd-MM-yyyy' }}</label>
+                </div>
+        
+                <!-- End Date-->
+                <div class="row">
+                    <label style="color: #BDC3C6; padding-right: 10px;">End Date</label>
+                    <label>{{ selectedDocument.endDate | date: 'dd-MM-yyyy' }}</label>
+                </div>
+        
+                <!-- Delete -->
+                <div style="text-align: center;">
+                    <button class="delete-btn" mat-flat-button>Delete</button>
+                </div>
+        
+                <h6 style="margin-top: 30px; margin-bottom: 15px;">Scan Results</h6>
+                
+                <!-- Status-->
+                <div class="row">
+                    <label style="color: #BDC3C6; padding-right: 10px;">Status</label>
+                    <button class="status-btn" mat-flat-button *ngIf="selectedDocument.status == 0">Inprogress</button>
+                    <button class="status-btn-1" mat-flat-button *ngIf="selectedDocument.status == 1">Verified</button>
+                </div>
+        
+                <!-- ID Card -->
+                <div class="row">
+                    <label style="color: #BDC3C6; padding-right: 10px;">ID Card</label>
+                    <label>N / A</label>
+                </div>
+        
+                <!-- Address -->
+                <div class="row">
+                    <label style="color: #BDC3C6; padding-right: 10px;">Address</label>
+                    <label>N / A</label>
+                </div>
+        
+                <!-- Live Check -->
+                <div class="row">
+                    <label style="color: #BDC3C6; padding-right: 10px;">Live Check</label>
+                    <label>N / A</label>
+                </div>
+        
+                <div class="row">
+                    <!-- Delete -->
+                    <div style="text-align: center;">
+                        <button class="edit-btn" mat-flat-button>Edit</button>
+                        <button class="download-btn" mat-flat-button>Download</button>
+                    </div>
+                </div>
+            </div>
+        
+        </div>
+    </div>
+
+</div>
+

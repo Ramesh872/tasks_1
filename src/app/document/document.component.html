@@ -1,0 +1,135 @@
+<!-- Side Menu -->
+<div class="row">
+
+    <div class="col-md-1" style="background-color: black; height: 580px;">
+        <div class="sidenav">
+            <a href="#">
+                <img src="assets/icons/dashboard (5) 1.svg">
+            </a>
+        </div>
+        <div class="sidenav">
+            <a href="#">
+                <img src="assets/icons/Group (4).svg">
+            </a>
+        </div>
+        <div class="sidenav">
+            <a href="#">
+                <img src="assets/icons/business-report-with-growth (1) 1.svg">
+            </a>
+        </div>
+        <div class="sidenav">
+            <a href="#">
+                <img src="assets/icons/settings (2) 1.svg">
+            </a>
+        </div>
+        <div class="sidenav">
+            <a href="#">
+                <img src="assets/icons/user 2.svg">
+            </a>
+        </div>
+        <div class="sidenav">
+            <a routerLink="/login">
+                <img src="assets/icons/logout-button 1.svg" alt="">
+            </a>
+        </div>
+    </div>
+
+    <div class="col-md-11">
+
+        <div class="row header">
+
+            <!-- Document Dropdown -->
+            <div class="col-md-3">
+                <mat-form-field class="dropdown" appearance="fill">
+                    <mat-label>Document ID</mat-label>
+                    <mat-select>
+                      <mat-option *ngFor="let document of documents" [value]="document.Tenant_ID">{{ document.Tenant_ID }}</mat-option>
+                    </mat-select>
+                </mat-form-field>
+            </div>
+        
+            <!-- Search -->
+            <div class="col-md-3">
+                <div class="input-group">
+                    <input type="text" class="form-control" placeholder="Filter" aria-describedby="button-addon2">
+                    <div class="input-group-append">
+                        <button style="height: max-content" class="btn btn-outline-secondary" type="button" id="button-addon2">
+                            <img src="assets/icons/Group (5).svg" alt="">
+                        </button>
+                    </div>
+                </div>
+            </div>
+        
+            <div class="col-md-6"></div>
+        
+        </div>
+        
+        <div class="row" *ngFor="let document of documents">
+            <a [routerLink]="['/document', document.Tenant_ID]">
+                <div class="col-md-3">
+        
+                    <!-- Document ID -->
+                    <label style="color: #BDC3C6;">Document ID</label>
+                    <div class="margin">
+                        <label>{{ document.Tenant_ID }}</label>
+                    </div>
+        
+                    <!-- Scan ID -->
+                    <label style="color: #BDC3C6;">Scan ID</label>
+                    <div class="margin">
+                        <label>-</label>
+                    </div>
+                </div>
+        
+                <div class="col-md-3">
+                    
+                    <!-- Created  On -->
+                    <label style="color: #BDC3C6;">Created  On</label>
+                    <div class="margin">
+                        <label>{{ document.startDate | date: 'dd-MM-yyyy' }}</label>
+                    </div>
+        
+                    <!-- Created Time -->
+                    <label style="color: #BDC3C6;">Created Time</label>
+                    <div class="margin">
+                        <label>{{ document.startDate | date: 'hh:mm a' }}</label>
+                    </div>
+                </div>
+        
+                <div class="col-md-3">
+                    
+                    <!-- Name -->
+                    <label style="color: #BDC3C6;">Name</label>
+                    <div class="margin">
+                        <label>{{ document.fieldName }}</label>
+                    </div>
+        
+                    <!-- Nationality -->
+                    <label style="color: #BDC3C6;">Nationality</label>
+                    <div class="margin">
+                        <label>India</label>
+                    </div>
+                </div>
+        
+                <div class="col-md-3">
+                    
+                    <!-- Tenent -->
+                    <label style="color: #BDC3C6;">Tenent</label>
+                    <div class="margin">
+                        <label>HDFC</label>
+                    </div>
+        
+                    <!-- Status -->
+                    <label style="color: #BDC3C6;">Status</label>
+                    <div class="margin">
+                        <button class="status-btn" mat-flat-button *ngIf="document.status == 0">Inprogress</button>
+                        <button class="status-btn-1" mat-flat-button *ngIf="document.status == 1">Verified</button>
+                    </div>
+                </div>
+            </a>
+        
+        </div>
+    </div>
+
+</div>
+

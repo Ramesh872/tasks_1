@@ -1,0 +1,47 @@
+.sidenav {
+    padding: 15px 30px 15px 30px;
+}
+
+.document {
+    margin: 10px 10px 25px 10px;
+}
+
+.row {
+    margin: auto;
+    margin-top: 10px;
+}
+
+.margin {
+    margin-top: 10px;
+    margin-bottom: 15px;
+}
+
+.status-btn-0 {
+    border: 1px solid #FCDB77;
+    color: #FCDB77;
+}
+
+.status-btn-1 {
+    border: 1px solid #96D8BA;
+    color: #96D8BA;
+}
+
+.delete-btn {
+    background-color: #E04D4D;
+}
+
+.back_button {
+    margin: auto;
+    text-align: center;
+}
+
+.edit-btn {
+    margin-right: 10px;
+    border: 1px solid #37B97E;
+    color: #37B97E;
+}
+
+.download-btn {
+    background-color: #37B97E;
+    color: #fff;
+}
